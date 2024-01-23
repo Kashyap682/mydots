@@ -23,5 +23,4 @@ chmod +x sxhkd/sxhkdrc
 
 echo "exec bspwm" > .xinitrc
 
-
-
+echo "Done."
