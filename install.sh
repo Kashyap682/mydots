@@ -1,4 +1,4 @@
-!# /usr/bin/bash
+#! /usr/bin/bash
 
 sudo dnf install xorg-x11-server-Xorg xorg-x11-xinit
 sudo dnf nano python pip
