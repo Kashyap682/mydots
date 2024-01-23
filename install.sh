@@ -16,7 +16,6 @@ chmod +x setup.sh
 
 rm -R polybar
 
-git clone https://github.com/Kashyap682/mydots.git
 cd mydots
 cp -R mydots/config/* .config/
 
