@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 sudo dnf install xorg-x11-server-Xorg xorg-x11-xinit
-sudo dnf nano python pip
+sudo dnf install nano python pip
 sudo dnf install bspwm sxhkd polybar picom dmenu rofi
 sudo dnf install nitrogen thunar firefox geany
 
