@@ -16,7 +16,7 @@ cd
 rm -R .config/polybar
 
 cd ~/mydots
-mv -R ~/mydots/config/* ~/.config/
+cp -R ~/mydots/config/* ~/.config/
 
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/sxhkd/sxhkdrc
