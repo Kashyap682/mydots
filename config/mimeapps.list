@@ -1,0 +1,6 @@
+[Added Associations]
+application/x-shellscript=geany.desktop;
+application/x-zerosize=geany.desktop;
+
+[Default Applications]
+application/x-zerosize=geany.desktop
