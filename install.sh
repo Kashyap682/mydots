@@ -3,7 +3,7 @@
 sudo dnf install xorg-x11-server-Xorg xorg-x11-xinit
 sudo dnf install nano python pip
 sudo dnf install bspwm sxhkd polybar picom dmenu rofi
-sudo dnf install nitrogen thunar firefox geany
+sudo dnf install nitrogen thunar firefox geany neofetch
 
 mkdir ~/.config
 
@@ -20,6 +20,7 @@ cp -R ~/mydots/config/* ~/.config/
 
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/sxhkd/sxhkdrc
+chmod +x ~/.config/polybar/scripts/*
 
 echo "exec bspwm" > ~/.xinitrc
 
