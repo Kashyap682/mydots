@@ -16,14 +16,12 @@ mod = "mod4"
 terminal = "kitty"
 browser = "google-chrome-stable"
 files = "Thunar"
-editor = "geany"
 
 keys = [
     # Basic Applications
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod, "shift"], "f", lazy.spawn(files), desc="Launch Thunar"),
     Key([mod, "shift"], "w", lazy.spawn(browser), desc="Launch Thunar"),
-    Key([mod, "shift"], "e", lazy.spawn(editor), desc="Launch Thunar"),
     Key(
         [mod],
         "d",
