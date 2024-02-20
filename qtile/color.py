@@ -1,3 +1,17 @@
+import json
+
+colors_file = "/home/polter/.cache/wal/colors.json"
+with open(colors_file, "r") as f:
+    colors = json.load(f)
+
+custom = {
+    "background": colors['special']['background'],
+    "foreground": colors["special"]["foreground"],
+    "color1": colors["colors"]["color2"],
+    "color2": colors["colors"]["color3"],
+    "color3": colors["colors"]["color4"],
+}
+
 rose_pine = {
     'Base': "#191724",
     'Surface': "#1f1d2e",

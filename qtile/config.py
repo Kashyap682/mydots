@@ -25,8 +25,8 @@ keys = [
     Key(
         [mod],
         "d",
-        lazy.spawn("rofi -theme ~/.config/rofi/themes/launcher.rasi -show drun"),
-        desc="Launch Rofi",
+        lazy.spawn("/home/polter/.config/scripts/dmenu_launcher.sh"),
+        desc="Launch dmenu",
     ),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # Qtile Control
@@ -36,9 +36,11 @@ keys = [
     Key(
         [mod],
         "x",
-        lazy.spawn("/home/polter/.config/scripts/powermenu"),
-        desc="Rofi Power Menu",
+        lazy.spawn("/home/polter/.config/scripts/dmenu_power.sh"),
+        desc="Power Menu",
     ),
+    Key([mod], "w", lazy.spawn("/home/polter/.config/scripts/wallpaper.sh")),
+    Key([mod], "v", lazy.spawn("clipmenu -c")),
     # Toggle Float and Fullscreen
     Key(
         [mod],

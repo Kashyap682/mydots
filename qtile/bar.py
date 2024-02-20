@@ -1,4 +1,4 @@
-from color import rose_pine_moon
+from color import rose_pine_moon, custom
 import os
 from libqtile.lazy import lazy
 import libqtile.widget
@@ -42,13 +42,12 @@ bar = Bar([
                 borderwidth = 3,
                 highlight_method = "line",
                 urgent_alert_method = "line",
-                active = rose_pine_moon['Iris'],
-                inactive = rose_pine_moon['HighlightHigh'],
-                highlight_color = rose_pine_moon['Base'],
-                this_current_screen_border = rose_pine_moon['Iris'],
+                active = custom['color3'],
+                inactive = custom['foreground'],
+                this_current_screen_border = custom['color1'],
                 urgent_border = rose_pine_moon['Love'],
                 disable_drag = True,
-                hide_unused = False,
+                hide_unused = True,
         ),
         Sep(
                 padding = 12,
@@ -56,14 +55,14 @@ bar = Bar([
                 size_percent = 10,
         ),
 	CurrentLayoutIcon(
-                foreground = rose_pine_moon['Iris'],
+                foreground = custom['foreground'],
                 padding = 4,
                 scale = 0.6,
         ),
         CurrentLayout(
 		font = "JetBrainsMono Nerd Font Bold",
 		fontsize = 14,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
                 padding = 5
         ),
         Sep(
@@ -72,8 +71,8 @@ bar = Bar([
                 size_percent = 10,
         ),
         widget.Mpris2(
-                background = rose_pine_moon['Base'],
-                foreground = rose_pine_moon['Text'],
+                background = custom['background'],
+                foreground = custom['foreground'],
                 name = "spotify",
                 objname = "org.mpris.MediaPlayer2.spotify",
                 fmt = "  {}",
@@ -82,8 +81,8 @@ bar = Bar([
                 fontsize = 14,
         ),
         widget.Prompt(
-                background = rose_pine_moon['Base'],
-                foreground = rose_pine_moon['Text'],
+                background = custom['background'],
+                foreground = custom['foreground'],
                 font = "JetBrainsMono Nerd Font Bold",
                 fontsize = 13,
         ),
@@ -99,7 +98,7 @@ bar = Bar([
         ),
         WindowName(
 		font = "JetBrainsMono Nerd Font Bold",
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		fontsize = 14,
 		max_chars = 50,
 		parse_text = winName,
@@ -107,12 +106,12 @@ bar = Bar([
 	),
         Wlan(
 		fontsize = 13,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		format = '  {essid} {percent:2.0%}',
 		disconnected_message = "󰖪 ",
 		padding = 5,
 		mouse_callbacks = {
-			"Button1": lambda: qtile.cmd_spawn("/home/polter/.config/scripts/rofi-wifi-menu.sh")
+			"Button1": lambda: qtile.cmd_spawn("/home/polter/.config/scripts/dmenu_wifi.sh")
                 },
         ),
 	Sep(
@@ -122,11 +121,11 @@ bar = Bar([
         ),
         Bluetooth(
 		fontsize = 14,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		default_text = "  {connected_devices}",
 		padding = 5,
 		mouse_callbacks = {
-			"Button1": lambda: qtile.cmd_spawn("/home/polter/.config/scripts/rofi-bluetooth-menu.sh")
+			"Button1": lambda: qtile.cmd_spawn("/home/polter/.config/scripts/dmenu_bluetooth.sh")
                 },
         ),
 	Sep(
@@ -136,7 +135,7 @@ bar = Bar([
         ),
         Volume(
 		fontsize = 16,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		padding = 5,
 		emoji = True,
 		emoji_list = ["󰝟", "", "", ""],
@@ -157,7 +156,7 @@ bar = Bar([
 		update_interval = 1,
 		low_percentage = 0.2,
 		notify_below = 20,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		low_foreground = rose_pine_moon['Rose'],
 		mouse_callbacks = {
 			"Button1": lambda: qtile.cmd_spawn("xfce4-power-manager-settings"),
@@ -171,7 +170,7 @@ bar = Bar([
         Clock(
 		format='  %d-%m-%y',
 		fontsize = 14,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
 		mouse_callbacks = {
 			"Button1": lambda: qtile.cmd_spawn("kitty -c /home/polter/.config/kitty/themes/rose-pine-moon.conf calcurse"),
                 },
@@ -184,7 +183,7 @@ bar = Bar([
         Clock(
 		format=' %H:%M',
 		fontsize = 14,
-		foreground = rose_pine_moon['Text'],
+		foreground = custom['foreground'],
         ),
         Sep(
                 padding = 12,
@@ -198,8 +197,8 @@ bar = Bar([
                 size_percent = 10,
         ),
     ],
-        size = 32,
-        margin = [10, 10, 5, 10],
-        background = rose_pine_moon['Base'],
+        size = 36,
+        margin = [5, 5, 5, 5],
+        background = custom['background'],
         opacity = 1,
 )

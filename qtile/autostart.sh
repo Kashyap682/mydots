@@ -8,3 +8,4 @@ xfce4-power-manager &
 flameshot &
 lxsession &
 udiskie &
+clipmenud &
